@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <button id="calendarBtn"></button>
+    <script>
+        const btn = document.getElementById("calendarBtn");
+        btn.innerText = `${setZeroNumber(today.getDate())}.${setZeroNumber(today.getMonth() + 1)}.${currentYear}`;
+        btn.addEventListener("click", showCalendar);
+    </script>
+</body>
+</html>

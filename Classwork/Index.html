@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button onclick="openWindow()">Press me to open</button>
+    <button onclick="closeWindow()">Press me to close</button>
+    <script>
+        /* При нажатии на кнопку открывается новое окно браузера (window) */
+        let w;
+        let wWidth = Math.round(screen.width / 3)
+        let wHeight = Math.round(screen.height / 2)
+        let wTop = (screen.height - wHeight) / 2
+        let wLeft = (screen.width - wWidth) / 2
+        function openWindow() {
+            w = window.open("", "", `width=${wWidth}, height=${wHeight}, top=${wTop}, left=${wLeft}` )
+            w.document.body.style.backgroundColor = getRGB();
+        }
+        function closeWindow() {
+            w.close();
+        }
+        //w.resizeTo(x,y) - изменение размера нового окна (вписываешь значение (200, 400))
+        //w.resizeBy(x,y) - изменеие размера окна НА опр. (задаешь на сколько(0.5, 2) или (-200, -0,5))
+        //w.moveBy(x,y) - сдвиг окна 
+
+        function getNumber(max = 10, min = 0) {
+            return Math.floor(Math.random() * (max - min) + min)
+        }
+
+        function getRGB() {
+            return `rgb(${getNumber(256)}, ${getNumber(256)}, ${getNumber(256)})`
+        }
+
+        // создать кнопочку, при нажатии на которую меняется цвет заднего фона
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // var a = ["Red","Blue","Green","Purple","Black","White"]
+        // a.push(7)
+
+        // a.pop()
+        
+        // a.shift()
+        
+        // a.unshift()
+
+
+
+        
+        // alert(a.length)
+        
+        // delete a[2]
+
+        // a[2] = "Green"
+
+        // alert(a)
+        
+        // alert(a.length)
+
+
+
+
+
+        // a.splice(1,2)
+        // alert(a)
+
+        // a.splice(1,0,"Blue","Green")
+
+        //  a.splice(4,1,"Yelloow") 
+        //  <!-- Первая цифра - номер эл-та , вторая цифра- сколко значений удалить после него, Значение можно заменять("Yelloow")-->
+
+
+
+        // alert(a)
+
+        // var b = [1,2,3]
+
+        // alert(a.concat(b))
+
+        // alert(a.sort())
+
+        // alert(a.reverse())
+
+
+        // var user = {
+        //     name: "Alex",
+        //     IsAdmin: false
+        // }
+
+        // var pop = user
+        // --> значения в обеих переменных поменяются, т.к. они равны друг другу
+        // pop.name = "Stepa"
+        // pop.IsAdmin = true
+        // alert(user.IsAdmin)
+
+        // var perm = {
+        //     CanView = false, 
+        //     CanDelete = false
+        // }
+        // var perm2 = {
+        //     CanEdit = true
+        // }
+
+        // Object.assign(user, perm, perm2)
+        // // Добавление значений, свойств одной пер-ой в другую 
+        // alert(user.CanDelete)
+
+
+
+        // function Bob() {
+        //     alert("Bob!!!")
+        // }
+    
+        // // Или
+        // var Bob = function() {
+        //     alert("Bob!!!")
+        // }
+
+
+
+        // var sum = function(a,b) {
+        //     return a+b
+        // }
+        // alert(sum(1,2))
+
+
+            // var sum = (a,b) => a+b
+            // alert(sum(4,20))
+
+
+
+
+
+
+
+        // var massive = [1,2,3]
+        // massive.splice(2,0,23)
+        // alert(massive.sort())
+
+
+
+        // var a =[9]
+        // var b =[10]
+        // alert(a == 9)
+        // alert(b == 10)
+        // alert(a < b)
+
+
+        // function Tof(){
+        //     return 10
+        // }
+        // Tof.text = "Hello"
+        // alert(typeof Tof)
+        // alert(typeof Tof())
+        // alert(typeof Tof.text)
+
+// var a =10
+//         a>5? alert("sdfghjkloiugvbn"): console.log("dfgthgdfbgrdf")
+
+
+        var Temp = prompt('Whats the temperature today?','')
+        var Weather = prompt('Whats the weather today?','')
+        // if (Temp >= 20 & Weather.includes("clear")) {
+        //     alert("Welcome to the Golf club!!!")
+        // } else {
+        //     alert("It's not a good weather to play today, come later!!!")
+        // }
+
+        Temp >= 20 && Weather == "clear"?
+        alert("Welcome!!!"):
+        Weather == "Foggy" ?
+        alert("Bad weather. Not today"):
+        Weather == null || Weather == ''?
+        alert("You didn't say whats the weather")
+
+
+        
+    </script>
+</body>
+</html>

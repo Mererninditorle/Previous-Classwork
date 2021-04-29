@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="preview" id="box"></div>
+    <div class="colors">
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+        <div class="color-item"></div>
+    </div>
+    <script>
+        /*
+            document.getElementById() - получение узла элемента по атрибуту id.
+
+            document.getElementsByClassName() - получение html-коллекции(elementS) из узлов элементов с заданным классом.
+
+            document.getElementByName() - получение HTML-коллекции из узлов элементов с атрибутом name.
+
+            document.getElementByTagName() - получение HTML-коллекции из узлов элементов с соответсвующим тегом.
+
+        */
+        const viewBox = document.getElementById("box"),
+                items = document.getElementsByClassName("color-item");
+
+            const getNumber = (max=11, min=0) => Math.floor(Math.random() * (max - min) + min);
+            const getColor = () => `rgb(${getNumber(256)},
+                                        ${getNumber(256)},
+                                        ${getNumber(256)})`
+                for(let it of items) {
+                    // .setAttribute("название атрибута", "значение атрибута") - добавляет к тегу атрибут
+                    it.setAttribute("data-color", getColor());
+                    // .getAttribute("название атрибута") - получить значение атрибута
+                    let currentColor = it.getAttribute("data-color");
+                    it.setAttribute("style", `background:${currentColor}`);
+                    it.onclick = () => {
+                        viewBox.setAttribute("style", `background:${currentColor}`);
+                    }
+                    viewBox.setAttribute("style", `background:${items[0].getAttribute("data-color")}`)
+                }
+    </script>
+</body>
+</html>

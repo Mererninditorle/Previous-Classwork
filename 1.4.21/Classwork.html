@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easter egg</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #212126;
+            flex-direction: column;
+        }
+
+        button {
+            padding: 20px 40px;
+            border-radius: 30px;
+            outline: none;
+            background-color: #63735E;
+            border: none;
+            color: #212126;
+            text-transform: uppercase;
+            font: bold 40px sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button>Don't press</button>
+    <p style="color: #736958; font: 25px sans-serif; text-transform: uppercase;">You can't press this button more than 10 times</p>
+    <script>
+        let ping = 0;
+        // document.getElementsByTagName("button")[0];
+        let btn = document.body.firstElementChild;
+
+        // btn.onclick = function() {
+        //     ping++;
+        //     console.log("click " + ping)
+        // }
+        // btn.onclick = function() {
+        //     this.innerText = "Button pressed"
+        // }
+
+        // addEventListener -  
+        const ticks = function() {
+            ping++;
+            console.log("click " + ping);
+        }
+        btn.addEventListener("click", ticks);
+        btn.addEventListener("click",function() {
+            this.innerText = "Button pressed";
+            if (ping >= 10) {
+            this.innerText = "Farewell";
+            btn.removeEventListener("click", ticks)
+            }
+        });
+        btn.addEventListener("click", e => {
+            document.body.style.opacity = (100 - ping * 10) / 100
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab</title>
+    <style>
+        body {
+            padding: 0;
+            background-color: #A6A6BF;
+            font: 30px sans-serif;
+            color: #212126;
+        }
+
+        .vis {
+            display: none;
+        }
+
+        div {
+            width: fit-content;
+            cursor: pointer;
+        }
+
+        div:hover {
+            font: 40px sans-serif;
+            transition-duration: 0.5s;
+        }
+
+        li {
+            background-color: #414173;
+        }
+    </style>
+</head>
+<body>
+    <h1>Catalog</h1>
+    <ul>
+            <li>
+                <div id="Books">Книги</div>
+                <ul id="home" class="vis">
+                    <li>
+                        <div>Отечественные</div>
+                    </li>
+                </ul> 
+                <ul id="foreign" class="vis">
+                    <li>
+                        <div id="FOREIGN">Зарубежные</div>
+                    </li>
+                    <ul id="items" class="vis">
+                        <li>Детективы</li>
+                        <li>Научная фантастика</li>
+                        <li>Исторические</li>
+                    </ul>
+                </ul>
+            </li>
+                <br>
+            <li>
+            <div id="DVD">DVD</div>
+                <ul id="home_DVD" class="vis">
+                    <li>
+                        <div>Отечественные</div>
+                    </li>
+                </ul> 
+                
+                <ul id="foreign_DVD" class="vis">
+                    <li>
+                        <div id="FOREIGN_DVD_2">Зарубежные</div>
+                    </li>
+                    <ul id="items_2" class="vis">
+                        <li>Детективы</li>
+                        <li>Научная фантастика</li>
+                        <li>Исторические</li>
+                    </ul>
+                </ul>
+            </li>
+    </ul>
+
+    <script>
+        const home = document.getElementById("home");
+        const foreign = document.getElementById("foreign");
+        const Books = document.getElementById("Books");
+        const FOREIGN = document.getElementById("FOREIGN");
+        const items = document.getElementById("items");
+        Books.addEventListener("click", (e) => {
+            home.classList.toggle("vis");
+            foreign.classList.toggle("vis");
+        });
+        FOREIGN.addEventListener("click", (e) => {
+            items.classList.toggle("vis");
+        });
+
+
+        const home_DVD = document.getElementById("home_DVD");
+        const foreign_DVD = document.getElementById("foreign_DVD");
+        const DVD = document.getElementById("DVD");
+        const FOREIGN_DVD_2 = document.getElementById("FOREIGN_DVD_2");
+        const items_2 = document.getElementById("items_2");
+        DVD.addEventListener("click", (e) => {
+            home_DVD.classList.toggle("vis");
+            foreign_DVD.classList.toggle("vis");
+        });
+        FOREIGN_DVD_2.addEventListener("click", (e) => {
+            items_2.classList.toggle("vis");
+        })
+    </script>
+</body>
+</html>

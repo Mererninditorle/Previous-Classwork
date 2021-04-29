@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="rating" onsubmit="getFormbody();">
+        <input type="text" name="name" placeholder = "Enter name:" onchange="getInfo();">
+        <br>
+        <lable for="">favourite food</lable>
+        <select name="favor" id="fav" onchange="getInfo();">
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Sushi">Sushi</option>
+        </select>
+        <br>
+        <input type="button" value="Click" onclick="getFormBody(this);">
+    </form>
+    <script src="HomeworkForm.js"></script>
+    <br>
+    <input type="button" value="tap to console.log" onclick="ConsoleIt();">
+</body>
+</html>

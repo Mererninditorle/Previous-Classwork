@@ -50,23 +50,16 @@ body {
 }
 
 .arrow {
-    background: #fff;
-    width: 1.5rem;
-    height: .5rem;
     position: absolute;
-    transform-origin: 1.5rem 0rem;
-    transform: rotate(45deg);
-    top: 50%;
+    top: calc(50% - 2.5rem);
+    font-size: 5rem;
+    line-height: 1;
 }
 
-.arrow::before {
-    background: #fff;
-    width: 1.5rem;
-    height: .5rem;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: 0;
-    transform-origin: 1.5rem .5rem;
-    transform: rotate(-90deg);
+.arrow.left {
+    transform: scale(-1,1);
+    left: 1rem;
+}
+.arrow.right {
+    right: 1rem;
 }

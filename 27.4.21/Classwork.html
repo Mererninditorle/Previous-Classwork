@@ -12,8 +12,35 @@
     <div class="lightbox">
         <div class="box"></div>
         <div class="cross"></div>
-        <div class="arrow left">»</div>
-        <div class="arrow right">»</div>
+        <div class="arrow left" onclick="plusSlides(-1)">»</div>
+        <div class="arrow right" onclick="plusSlides(1)">»</div>
     </div>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("card");
+        if (n > slides.length) {
+            slideIndex = 1
+        } 
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"; 
+        }
+        slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>

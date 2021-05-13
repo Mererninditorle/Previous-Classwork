@@ -9,7 +9,9 @@
     <style>
         .box {
             min-height: 50vh;
-            background-color: cadetblue;
+            border-color: cadetblue;
+            border-right-style: solid;
+            border-left-style: solid;
         }
         .col {
             border: 1px solid;
@@ -19,7 +21,7 @@
 </head>
 <body>
     <div class="box container">
-        <div class="h1">Twitter-Bootstrap</div>
+        <div class="h1 d-flex justify-content-center">Twitter-Bootstrap</div>
         <div class="row">
             <div class="col col-12"></div>
             <div class="col col-4"></div>
@@ -27,7 +29,73 @@
             <div class="col col-4"></div>
             <div class="col col-2"></div>
             <div class="col col-10"></div>
-            <div class="col col-12"></div>
+            <div class="col col-12">
+
+                <!-- 
+                    .table-borderless
+                    .table-bordered
+                    .table-dark
+                    .table-hover
+                    .table-striped
+                    https://getbootstrap.com/docs/5.0/utilities/flex/ - flex
+                    https://getbootstrap.com/docs/5.0/utilities/sizing/ - sizing
+                    https://getbootstrap.com/docs/5.0/utilities/spacing/ - spacing
+                -->
+                <table class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th>caption 1</th>
+                            <th>caption 2</th>
+                            <th>caption 3</th>
+                            <th>caption 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet.</td>
+                            <td>Non quaerat dolorum voluptas vel!</td>
+                            <td>Repellat numquam eum iure odit?</td>
+                            <td>Aperiam, placeat. Quaerat, dolor sunt.</td>
+                        </tr>
+                        <tr>
+                            <td>Laboriosam architecto minima molestias dolorum.</td>
+                            <td>Dolores inventore tenetur quisquam fugiat.</td>
+                            <td>Libero pariatur non error expedita?</td>
+                            <td>Qui ullam aliquam quae eum.</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <td>Laboriosam vero unde nobis ad.</td>
+                            <td>Quisquam dolores reiciendis ratione laudantium.</td>
+                            <td>Dolore perferendis cumque iste sed!</td>
+                            <td>Quam aliquam quo minus debitis?</td>
+                        </tr>
+                        <tr>
+                            <td class="table-dark">Quos magnam omnis voluptatum aperiam!</td>
+                            <td>Sunt dolore ipsam vel facere.</td>
+                            <td>Animi eius velit unde doloribus!</td>
+                            <td>Quasi provident commodi ipsam unde.</td>
+                        </tr>
+                        <tr>
+                            <td>Alias sit ipsa deserunt inventore?</td>
+                            <td>Quidem quod ipsum animi quisquam.</td>
+                            <td>Pariatur earum sed molestiae id?</td>
+                            <td>Provident repellat fuga eius tenetur?</td>
+                        </tr>
+                        <tr>
+                            <td>Quod nesciunt quas exercitationem corrupti!</td>
+                            <td>Porro pariatur earum dolor aliquid!</td>
+                            <td>Enim architecto excepturi odit cumque.</td>
+                            <td>Repudiandae libero veniam provident veritatis.</td>
+                        </tr>
+                        <tr>
+                            <td>Minus dolorum deserunt sit voluptatibus?</td>
+                            <td>Reiciendis, perspiciatis eaque. Omnis, repudiandae.</td>
+                            <td>A recusandae incidunt minima vel.</td>
+                            <td>Eos culpa minus ipsa magni?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <div class="col col-6"></div>
             <div class="col col-6"></div>
             <div class="col col-12 col-sm-6 col-md-3">card 2</div>
@@ -37,6 +105,5 @@
             <div class="col col-12"></div>
         </div>
     </div>
-    <div class="box container-fluid"></div>
 </body>
 </html>

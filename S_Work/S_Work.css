@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    width: 600px;
+    height: 300px;
+    background-color: #BF7245;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.pic {
+    height: 140px;
+
+}
+
+.name {
+    text-align: center;
+    font: 600 40px sans-serif;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    
+    <style>
+        .btn {
+            height: 100px;
+            width: 300px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-align: center;
+            transition-duration: 0.5s;
+            background-color: #212126;
+            color: burlywood;
+            font: 300 40px sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .btn:hover {
+            height: 150px;
+            width: 450px;
+            filter: invert(100%);
+            transition-duration: 0.5s;
+        }
+        h1 {
+            text-align: center;
+        }
+        .screen_1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello world!!!</h1>
+    <div class="screen_1">    
+        <div class="btn">PRESS ME</div>
+    </div>
+    <script>
+        var btn = document.querySelector(".btn");
+        i = 1;
+        btn.addEventListener("click", (e) => {
+            alert("You pressed " + i + " time(s)" );
+            let box = document.createElement("div");
+            document.body.appendChild(box);
+            box.className = "box";
+            box.innerText = `Pressed ${i} times`;
+            i++;
+        })
+
+        
+    </script>
+</body>
+</html>

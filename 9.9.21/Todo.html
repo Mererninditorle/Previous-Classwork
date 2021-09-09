@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo list</title>
+    <style>
+        #ul {
+            height: 1000px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ToDo List</h1>
+    <form>
+        <input type="text" class="task" placeholder="Enter task">
+        <input type="button" id="Button" value="Create task">
+    </form>
+    <ul id="ul">
+        Tasks:
+    </ul>
+</body>
+</html>
+<script>
+    var button = document.getElementById("Button");
+    var task = document.getElementsByTagName("input").value;
+    var ul = document.getElementById("ul");
+    button.onclick = (e) => {
+        var li = document.createElement("li");
+        li.innerText = `${task}`;
+        ul.appendChild(li);
+        alert(task);
+    }
+</script>
+
+<!-- не получилсь вывести значение input -->
